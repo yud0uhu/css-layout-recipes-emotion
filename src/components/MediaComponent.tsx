@@ -13,12 +13,6 @@ const Media = styled.div`
       grid-gap: 20px;
       margin-bottom: 4em;
     }
-    .media-flip {
-      grid-template-columns: 1fr fit-content(250px);
-      grid-template-areas:
-        "content image"
-        "footer image";
-    }
   }
 `;
 
@@ -31,14 +25,7 @@ const MediaFlip = styled(Media)`
   }
 `;
 
-const MediaFlipImage = styled(MediaFlip)`
-  @media (min-width: 500px) {
-    float: right;
-    margin: 0 0 0 20px;
-  }
-`;
-
-const Image = styled.div`
+const Image = styled.image`
   @media (min-width: 500px) {
     grid-area: image;
   }
@@ -50,7 +37,7 @@ const Content = styled.div`
   }
 `;
 
-const Footer = styled.div`
+const Footer = styled.footer`
   @media (min-width: 500px) {
     grid-area: footer;
   }
@@ -96,24 +83,26 @@ const MediaComponent: React.FC = () => {
         </Content>
         <Footer></Footer>
       </Media>
-      <MediaFlip>
-        <MediaFlipImage>
-          <img
-            src="https://mdn.github.io/css-examples/css-cookbook/balloon-sq2.jpg"
-            alt="Balloons"
-          />
-        </MediaFlipImage>
-        <Content>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac
-            porttitor elit lobortis ac. Vivamus ultrices sodales tellus et
-            aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent
-            quis risus id dolor venenatis condimentum.
-          </p>
-        </Content>
-        <Footer></Footer>
-      </MediaFlip>
+      <Media>
+        <MediaFlip>
+          <Image>
+            <img
+              src="https://mdn.github.io/css-examples/css-cookbook/balloon-sq2.jpg"
+              alt="Balloons"
+            />
+          </Image>
+          <Content>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum,
+              ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et
+              aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent
+              quis risus id dolor venenatis condimentum.
+            </p>
+          </Content>
+          <Footer></Footer>
+        </MediaFlip>
+      </Media>
       <Media>
         <Image>
           <img
