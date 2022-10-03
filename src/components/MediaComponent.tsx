@@ -31,6 +31,13 @@ const Image = styled.image`
   }
 `;
 
+const MediaFlipImage = styled(Image)`
+  @media (min-width: 500px) {
+    float: right;
+    margin: 0 0 0 20px;
+  }
+`;
+
 const Content = styled.div`
   @media (min-width: 500px) {
     grid-area: content;
@@ -83,26 +90,24 @@ const MediaComponent: React.FC = () => {
         </Content>
         <Footer></Footer>
       </Media>
-      <Media>
-        <MediaFlip>
-          <Image>
-            <img
-              src="https://mdn.github.io/css-examples/css-cookbook/balloon-sq2.jpg"
-              alt="Balloons"
-            />
-          </Image>
-          <Content>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum,
-              ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et
-              aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent
-              quis risus id dolor venenatis condimentum.
-            </p>
-          </Content>
-          <Footer></Footer>
-        </MediaFlip>
-      </Media>
+      <MediaFlip>
+        <MediaFlipImage>
+          <img
+            src="https://mdn.github.io/css-examples/css-cookbook/balloon-sq2.jpg"
+            alt="Balloons"
+          />
+        </MediaFlipImage>
+        <Content>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+            vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac
+            porttitor elit lobortis ac. Vivamus ultrices sodales tellus et
+            aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent
+            quis risus id dolor venenatis condimentum.
+          </p>
+        </Content>
+        <Footer></Footer>
+      </MediaFlip>
       <Media>
         <Image>
           <img
