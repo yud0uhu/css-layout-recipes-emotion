@@ -5,11 +5,6 @@ export const Container = styled.div`
   border-radius: 0.5em;
   padding: 20px 10px;
   display: flex;
-  padding: 10px;
-  border: 2px solid rgb(95, 97, 110);
-  border-radius: 0.5em;
-  margin: 0 10px;
-  flex: 1;
 `;
 
 // NOTE: Container要素の直下にある(子要素である)全称セレクタにスタイルが適用される;
